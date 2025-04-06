@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coral Bleaching Detector</title>
+</head>
+<body>
+    <h2>Upload Coral Image</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if result %}
+        <h3>Result: {{ result }}</h3>
+        <img src="{{ image }}" width="300">
+    {% endif %}
+</body>
+</html>
